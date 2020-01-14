@@ -315,93 +315,79 @@ describe('China UnionPay', function() {
     it('has a prefix of ' + prefix + ' and a length of 19');  })(prefix)}
 */
 
+
 //six digit prefixes------------------------------------------------------
   for (let i = 622126; i <= 622925; i++) {
-    var string = i.toString();
-    it('has a prefix of ' + string + ' and a length of 16', function() {
-      detectNetwork(string + '7562831234').should.equal('China UnionPay');
-    });
-    }
+    (function(i) {
+      it('has a prefix of ' + i + ' and a length of 16', function() {
+        detectNetwork(i + '7562831234').should.equal('China UnionPay');
+      });
 
-  for (let i = 622126; i <= 622925; i++) {
-    var string = i.toString();
-    it('has a prefix of ' + string + ' and a length of 17', function() {
-      detectNetwork(string + '75628312341').should.equal('China UnionPay');
-    });
-    }
+      it('has a prefix of ' + i + ' and a length of 17', function() {
+        detectNetwork(i + '75628312341').should.equal('China UnionPay');
+      });
 
-    for (let i = 622126; i <= 622925; i++) {
-    var string = i.toString();
-    it('has a prefix of ' + string + ' and a length of 18', function() {
-      detectNetwork(string + '756283123412').should.equal('China UnionPay');
-    });
-    }
+      it('has a prefix of ' + i + ' and a length of 18', function() {
+        detectNetwork(i + '756283123412').should.equal('China UnionPay');
+      });
 
-    for (let i = 622126; i <= 622925; i++) {
-    var string = i.toString();
-    it('has a prefix of ' + string + ' and a length of 19', function() {
-      detectNetwork(string + '7562831234123').should.equal('China UnionPay');
-    });
-    }
+      it('has a prefix of ' + i + ' and a length of 19', function() {
+        detectNetwork(i + '7562831234123').should.equal('China UnionPay');
+      });   })(i)}
+
+//Why did changing this according to the IIFE outline above work while the rest of the prefix functions remain unchanged?
 
 //three digit prefixes ------------------------------------------------------
     for (let i = 624; i <= 626; i++) {
-    var string = i.toString();
-    it('has a prefix of ' + string + ' and a length of 16', function() {
-      detectNetwork(string + '7562831234123').should.equal('China UnionPay');
+    it('has a prefix of ' + i + ' and a length of 16', function() {
+      detectNetwork(i + '7562831234123').should.equal('China UnionPay');
     });
     }
 
     for (let i = 624; i <= 626; i++) {
-    var string = i.toString();
-    it('has a prefix of ' + string + ' and a length of 17', function() {
-      detectNetwork(string + '75628312341123').should.equal('China UnionPay');
+    it('has a prefix of ' + i + ' and a length of 17', function() {
+      detectNetwork(i + '75628312341123').should.equal('China UnionPay');
     });
     }
 
     for (let i = 624; i <= 626; i++) {
-    var string = i.toString();
-    it('has a prefix of ' + string + ' and a length of 18', function() {
-      detectNetwork(string + '756283123412123').should.equal('China UnionPay');
+    it('has a prefix of ' + i + ' and a length of 18', function() {
+      detectNetwork(i + '756283123412123').should.equal('China UnionPay');
     });
     }
 
     for (let i = 624; i <= 626; i++) {
-    var string = i.toString();
-    it('has a prefix of ' + string + ' and a length of 19', function() {
-      detectNetwork(string + '7562831234123123').should.equal('China UnionPay');
+    it('has a prefix of ' + i + ' and a length of 19', function() {
+      detectNetwork(i + '7562831234123123').should.equal('China UnionPay');
     });
     }
 
 //four digit prefixes ------------------------------------------------------
     for (let i = 6282; i <= 6288; i++) {
-    var string = i.toString();
-    it('has a prefix of ' + string + ' and a length of 16', function() {
-      detectNetwork(string + '756283123412').should.equal('China UnionPay');
+    it('has a prefix of ' + i + ' and a length of 16', function() {
+      detectNetwork(i + '756283123412').should.equal('China UnionPay');
     });
     }
 
     for (let i = 6282; i <= 6288; i++) {
-    var string = i.toString();
-    it('has a prefix of ' + string + ' and a length of 17', function() {
-      detectNetwork(string + '7562831234113').should.equal('China UnionPay');
+    it('has a prefix of ' + i + ' and a length of 17', function() {
+      detectNetwork(i + '7562831234113').should.equal('China UnionPay');
     });
     }
 
     for (let i = 6282; i <= 6288; i++) {
-    var string = i.toString();
-    it('has a prefix of ' + string + ' and a length of 18', function() {
-      detectNetwork(string + '75628312341212').should.equal('China UnionPay');
+    it('has a prefix of ' + i + ' and a length of 18', function() {
+      detectNetwork(i + '75628312341212').should.equal('China UnionPay');
     });
     }
 
     for (let i = 6282; i <= 6288; i++) {
-    var string = i.toString();
-    it('has a prefix of ' + string + ' and a length of 19', function() {
-      detectNetwork(string + '756283123412312').should.equal('China UnionPay');
+    it('has a prefix of ' + i + ' and a length of 19', function() {
+      detectNetwork(i + '756283123412312').should.equal('China UnionPay');
     });
     }
 //end of loops
+
 
 });
 
