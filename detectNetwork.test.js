@@ -6,7 +6,7 @@
 // You don't actually want to fill *this* value in on line 9, but you'll see
 // other places in this file where you'll replace the FILL_ME_IN with a
 // different value.
-var FILL_ME_IN = 'Fill this value in';
+//var FILL_ME_IN = 'Fill this value in';
 
 /*describe('Introduction to Mocha Tests - READ ME FIRST', function() {
   // A Mocha test is just a function!
@@ -305,3 +305,21 @@ describe('Maestro', function() {
 
 });
 
+
+describe('China UnionPay', function() {
+  // Write full test coverage for the China UnionPay card
+  for (let i = 622126; i <= 622925; i++) {
+    var string = i.toString();
+    it('has a prefix of ' + string + ' and a length of 16', function() {
+      detectNetwork(string + '7562831234').should.equal('China UnionPay');
+    });
+  }
+});
+
+describe('Switch', function() {
+  // Write full test coverage for the Switch card
+
+
+
+
+});
