@@ -27,6 +27,16 @@ else if ((prefix === '34' || prefix === '37') && cardNumber.length == 15) {
   result = 'American Express';
 } 
 
+//checking Visa
+else if (prefix[0] === '4' && (cardNumber.length === 13 || cardNumber.length === 16 || cardNumber.length === 19)) {
+  result = 'Visa';
+}
+
+//checking MasterCard
+else if ((prefix === '51' || prefix === '52' || prefix === '53' || prefix === '54' || prefix === '55') && cardNumber.length === 16) {
+  result = 'MasterCard';
+}
+
 //case = other network
 else {
   result = 'unidentified network';
