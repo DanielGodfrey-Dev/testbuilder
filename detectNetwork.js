@@ -83,6 +83,11 @@ else if ((prefix === '34' || prefix === '37') && cardNumber.length == 15) {
   result = 'American Express';
 } 
 
+//checking Switch
+else if ((fourPrefix === '4903' || fourPrefix === '4905' || fourPrefix === '4911' || fourPrefix === '4936' || fourPrefix === '6333' || fourPrefix === '6759' || sixPrefix === '564182' || sixPrefix === '633110') && (cardNumber.length === 16 || cardNumber.length === 18 || cardNumber.length === 19)) {
+  result = 'Switch';
+}
+
 //checking Visa
 else if (prefix[0] === '4' && (cardNumber.length === 13 || cardNumber.length === 16 || cardNumber.length === 19)) {
   result = 'Visa';
@@ -109,10 +114,6 @@ else if (lengthCheckChinaUP() === true && prefixCheckChinaUP() === true) {
   result = 'China UnionPay';
 }
 
-//checking Switch
-else if ((fourPrefix === '4903' || fourPrefix === '4905' || fourPrefix === '4911' || fourPrefix === '4936' || fourPrefix === '6333' || fourPrefix === '6759' || sixPrefix === '564182' || sixPrefix === '633110') && (cardNumber.length === 16 || cardNumber.length === 18 || cardNumber.length === 19)) {
-  result = 'Switch';
-}
 
 //case = other network
 else {
